@@ -14,6 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'mvn test'
+                sh 'newman run testCol.json'
             }
             post {
                 always {
