@@ -4,11 +4,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class TestPageController {
+public class HelloController {
 
-	
-	@RequestMapping(value= "/testVypis")
-	public String testVypis() {
+	@RequestMapping(value="/hello")
+	public String hello() {
 		return "Hello world";
 	}
 }
