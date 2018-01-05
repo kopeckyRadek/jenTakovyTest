@@ -12,6 +12,7 @@ pipeline {
 			}
 			steps {
                 sh 'mvn -B -DskipTests clean package' 
+				sh 'echo $DOCKER_HOST'
             }
         }
         stage('Postman tests') {
