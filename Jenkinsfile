@@ -1,5 +1,5 @@
 pipeline {
-    
+    stages {
         stage('Postman tests') {
             agent {
                 docker { 
