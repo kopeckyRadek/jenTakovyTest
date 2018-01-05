@@ -21,7 +21,11 @@ pipeline {
                 }
             }
         }
+		stage ('mezi') {
+			sh 'ls -l'
+		}
         stage('Postman tests') {
+            
             steps {
 				sh 'echo "jen test"'
             }
