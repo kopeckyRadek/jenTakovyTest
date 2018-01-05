@@ -1,6 +1,6 @@
 {
 	"info": {
-		"name": "TestSampleCol",
+		"name": "TestSample",
 		"_postman_id": "b9876ec6-c4f1-a542-b647-645b4067da77",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -8,6 +8,20 @@
 	"item": [
 		{
 			"name": "testSample1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5d3175d-f5f5-4808-9094-f8115f366013",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
