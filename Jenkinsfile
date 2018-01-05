@@ -12,7 +12,7 @@ pipeline {
 			}
 			steps {
                 sh 'mvn -B -DskipTests clean package' 
-				sh 'docker-machine ip'
+				sh 'echo $BUILD_URL a $JENKINS_URL a GIT_URL'
             }
         }
         stage('Postman tests') {
