@@ -21,5 +21,10 @@ pipeline {
                 }
             }
         }
+        stage('Postman tests') {
+            steps {
+				sh 'echo "jen test"'
+            }
+        }
     }
 }
