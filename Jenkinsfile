@@ -22,7 +22,9 @@ pipeline {
             }
         }
 		stage ('mezi') {
-			sh 'ls -l'
+			steps {
+				sh 'ls -l'
+			}
 		}
         stage('Postman tests') {
             
