@@ -21,13 +21,5 @@ pipeline {
                 }
             }
         }
-        stage('Postman tests') {
-            agent {
-                image 'postman/newman_ubuntu1404'
-            }
-            steps {
-				sh 'echo "jen test"'
-            }
-        }
     }
 }
