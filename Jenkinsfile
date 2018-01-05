@@ -14,12 +14,19 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'mvn test'
-                sh 'newman run testCol.json'
             }
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
                 }
+            }
+        }
+        stage('Postman tests') {
+            agent {
+                image 'postman/newman_ubuntu1404'
+            }
+            steps {
+				sh 'echo "jen test"'
             }
         }
     }
