@@ -7,7 +7,22 @@ pipeline {
 	}
 
     stages {
-        stage('Postman') {
+		stage ('Build') {
+			steps {
+				sh 'echo "Build"'
+			}
+		}
+		stage ('Test') {
+			steps {
+				sh 'echo "Test"'
+			}
+		}
+		stage ('mezi') {
+			steps {
+				sh 'echo "mezi"'
+			}
+		}
+        stage('Postman tests') {
             steps {
 				sh 'echo "jen test"'
             }
