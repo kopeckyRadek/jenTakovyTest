@@ -1,5 +1,5 @@
 #
-FROM postman/newman_ubuntu1404
+FROM openjdk:8-jdk-alpine
 
 VOLUME /tmp
 
