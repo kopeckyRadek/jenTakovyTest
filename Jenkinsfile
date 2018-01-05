@@ -12,7 +12,7 @@ pipeline {
 			}
 			steps {
                 sh 'mvn -B -DskipTests clean package' 
-				sh 'echo $BUILD_URL a $JENKINS_URL a GIT_URL'
+				sh 'echo $HOME'
             }
         }
         stage('Postman tests') {
