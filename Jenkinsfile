@@ -12,7 +12,7 @@ pipeline {
 			}
 			steps {
                 sh 'mvn -B -DskipTests clean package' 
-				sh 'echo $DOCKER_HOST'
+				sh 'docker-machine ip'
             }
         }
         stage('Postman tests') {
