@@ -26,7 +26,7 @@ pipeline {
 			agent {
 				docker {
 					image 'postman/newman_ubuntu1404'
-					args '-v testColls:etc/newman'
+					args '-v testColls:/etc/newman'
 				}
 			}
             steps {
