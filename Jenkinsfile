@@ -1,8 +1,7 @@
 pipeline {
 	agent { dockerfile true }
-	
 	stages {
-		stage('test') {
+		stage('Pokus') {
 			steps {
 				sh 'echo 'test'
 			}
