@@ -1,13 +1,11 @@
 pipeline {
-	agent any
+	agent { dockerfile true }
 	
 	stages {
 	
-		stage('test') {
+		stage('Pokus') {
 			steps {
-				sh 'echo test'
-				sh 'echo $HOME'
-				sh 'ls -l'
+				sh 'echo 'test'
 			}
 		}
 	}
