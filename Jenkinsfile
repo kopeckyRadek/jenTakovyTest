@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Pokus') {
 			steps {
-				sh 'echo 'test'
+				sh 'echo test'
 			}
 		}
 	}
