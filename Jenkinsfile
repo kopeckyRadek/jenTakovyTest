@@ -1,9 +1,15 @@
 pipeline {
 	agent { dockerfile true }
 	stages {
-		stage('Pokus') {
+		stage('Build') {
 			steps {
-				sh 'echo test'
+				sh 'mvn -B -DskipTests clean package'
+			}
+		}
+		
+		stage ('Postman-Tests') {
+			steps {
+				sh 'newman run testColls/coll1.json'
 			}
 		}
 	}
