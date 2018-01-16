@@ -9,18 +9,8 @@ pipeline {
 				}
 			}
 			steps {
-				sh 'mvn -B -DskipTests clean package'
+				sh 'mvn install dockerfile:build'
 				sh 'ls -l'
-			}
-		}
-		
-		stage ('Postman-Tests') {
-			agent {
-				docker { dockerfile true }
-			}
-			steps {
-				sh 'cd ./newman'
-				sh 'newman run 	JenTest.postman_collection.json -e jentest.postman_environment.json'
 			}
 		}
 	}
