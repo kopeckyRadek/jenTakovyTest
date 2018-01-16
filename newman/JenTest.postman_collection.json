@@ -1,22 +1,26 @@
 {
 	"info": {
-		"name": "TestSample",
-		"_postman_id": "b9876ec6-c4f1-a542-b647-645b4067da77",
+		"name": "JenTest",
+		"_postman_id": "203731a2-63ee-b8c9-210b-1f39c1bd406b",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "testSample1",
+			"name": "test1",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "c5d3175d-f5f5-4808-9094-f8115f366013",
+						"id": "942184e8-956d-4d64-a641-fb773627cc13",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches 'Hello world'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Hello world\");",
 							"});"
 						]
 					}
@@ -27,12 +31,10 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8081/hello",
-					"protocol": "http",
+					"raw": "{{server}}/hello",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "8081",
 					"path": [
 						"hello"
 					]
